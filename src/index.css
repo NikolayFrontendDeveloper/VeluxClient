@@ -17,6 +17,10 @@ body {
   margin: 0;
 }
 
+.main_container {
+  padding-top: 186px;
+}
+
 .active {
   text-decoration: underline;
   color: rgb(22, 22, 22);
