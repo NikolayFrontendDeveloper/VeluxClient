@@ -9,8 +9,8 @@ export default function Layout() {
                     <NavLink to={'/'}>
                         <p>Home</p>
                     </NavLink>
-                    <NavLink to={'/catalog'}>
-                        <p>Catalog</p>
+                    <NavLink to={'/shop'}>
+                        <p>Shop</p>
                     </NavLink>
                     <NavLink to={'/contact'}>
                         <p>Contact</p>
@@ -21,7 +21,7 @@ export default function Layout() {
                 </div>
                 <div className={s.layout_center_column}>
                     <NavLink to={'/'}>
-                        <img className={s.header_logo} src="/logo.jpg" alt="logo" />
+                        <img className={s.header_logo} src="/logo.svg" alt="logo" />
                     </NavLink>
                 </div>
                 <div className={s.layout_right_column}>
