@@ -8,6 +8,10 @@ export default function CatalogPage() {
                 <p className={s.collections_title}>EXPLORE OUR PREMIUM GOODS</p>
                 <div className={s.products_wrapper}>
                     <Product></Product>
+                    <Product></Product>
+                    <Product></Product>
+                    <Product></Product>
+                    <Product></Product>
                 </div>
             </div>
         </div>

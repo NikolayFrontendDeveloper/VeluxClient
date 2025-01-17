@@ -31,8 +31,8 @@ export default function Layout() {
                     <NavLink to={'/profile'}>
                         <img src="/profile.svg" alt="profile" />
                     </NavLink>
-                    <NavLink to={'/cart'}>
-                        <img src="/cart.svg" alt="cart" />
+                    <NavLink to={'/bag'}>
+                        <img src="/bag.svg" alt="bag" />
                     </NavLink>
                 </div>
             </header>

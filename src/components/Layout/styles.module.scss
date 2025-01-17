@@ -3,10 +3,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.406);
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.406);
     box-sizing: border-box;
     width: 100%;
     position: absolute;
+    // background-color: black;
 
     .layout_left_column, .layout_right_column {
         display: flex;
