@@ -3,11 +3,13 @@ import s from './styles.module.scss'
 export default function Product() {
     return (
         <div className={s.product_box}>
-            <img className={s.product_img} src="/product-images/image.png" alt="product image" />
-            <div className={s.product_description_box}>
-                <p className={s.product_description}>Car Steering Wheel Cover</p>
-                <p className={s.product_price}>₴11.70</p>
-            </div>
+            <a href="/product">
+                <img className={s.product_img} src="/product-images/image1.png" alt="product image" />
+                <div className={s.product_description_box}>
+                    <p className={s.product_description}>Car Steering Wheel Cover</p>
+                    <p className={s.product_price}>₴11.70</p>
+                </div>
+            </a>
             <button className={s.btn_add_product}>
                 <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512" className={s.btn_add_product_icon}>
                     <circle cx="7" cy="22" r="2" fill="currentColor"/>
