@@ -6,7 +6,8 @@
 
     .product_main_box {
         display: flex;
-        width: 30%;
+        width: 50%;
+        justify-content: center;
         gap: 30px;
 
         .product_description_box {
@@ -14,26 +15,79 @@
             flex-direction: column;
             gap: 10px;
 
+            .product_title {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .stars_box {
+                display: flex;
+                gap: 3px;
+    
+                img {
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+
             .color_dots {
                 display: flex;
                 gap: 15px;
 
                 .dot {
                     border-radius: 50%;
-                    padding: 10px;
-                    border: 1px solid white;
+                    padding: 5px;
+                    border: 2px solid white;
                     background-color: white;
 
                     &:focus {
-                        border: 1px solid blue;
+                        border: 2px solid black;
                     }
 
                     .dot_inner {
                         border-radius: 50%;
                         width: 30px;
                         height: 30px;
-                        border:  1px solid black;
+                        border: .5px solid black;
                     }
+                }
+            }
+
+            .product_counter {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                border: 1px solid #4A4A4A;
+                border-radius: 5px;
+
+                button {
+                    border: none;
+                    background-color: rgb(246, 246, 246);
+                    cursor: pointer;
+                }
+            }
+
+            .btn_buy_it_now {
+                padding: 10px;
+                background-color: #ED3636;
+                border-radius: 5px;
+                border: none;
+                color: white;
+
+                &:hover {
+                    background-color: #4A4A4A;
+                }
+            }
+
+            .btn_add_to_cart {
+                background-color: #242424;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                padding: 10px;
+
+                &:hover {
+                    background-color: #4A4A4A;
                 }
             }
         }
