@@ -42,7 +42,7 @@ export default function ProductPage() {
                         </div>
                         <p className={s.product_rate}>Rated 4.8 by 53 customers</p>
                         <p className={s.product_price}>₴1,520.00</p>
-                        <p>Color Name: {}</p>
+                        <p className={s.color_indicator}>Color Name: {}</p>
                         <div className={s.color_dots}>
                             {colorDots.map(({ color, index }) => (
                                 <button

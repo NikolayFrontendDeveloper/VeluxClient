@@ -6,7 +6,7 @@
 
     .product_main_box {
         display: flex;
-        width: 50%;
+        width: 70%;
         justify-content: center;
         gap: 30px;
 
@@ -16,7 +16,8 @@
             gap: 10px;
 
             .product_title {
-                font-size: 30px;
+                // white-space: nowrap;
+                font-size: 40px;
                 font-weight: bold;
             }
 
@@ -28,6 +29,20 @@
                     height: 16px;
                     width: 16px;
                 }
+            }
+
+            .product_rate {
+                font-size: 18px;
+            }
+
+            .product_price {
+                font-size: 40px;
+                font-weight: bold;
+                color: #ED3636;
+            }
+
+            .color_indicator {
+                font-weight: bold;
             }
 
             .color_dots {
@@ -57,8 +72,8 @@
                 display: flex;
                 justify-content: space-between;
                 padding: 10px;
-                border: 1px solid #4A4A4A;
-                border-radius: 5px;
+                border: 1px solid #808080;
+                border-radius: 7px;
 
                 button {
                     border: none;
