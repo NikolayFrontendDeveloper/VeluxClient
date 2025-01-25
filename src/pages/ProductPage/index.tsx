@@ -1,6 +1,6 @@
 import s from './styles.module.scss'
 import ProductSwiper from '../../components/ProductSwiper'
-import { SwiperContext } from '../../context/SwiperContext'
+import { Context } from '../../context/Context'
 import { useContext, useState } from 'react'
 
 export default function ProductPage() {
@@ -11,7 +11,7 @@ export default function ProductPage() {
     const increment = (): void => setCount((prevCount) => prevCount === maxCount ? maxCount : prevCount + 1);
     const decrement = (): void => setCount((prevCount) => prevCount === minCount ? minCount : prevCount - 1);
 
-    const context = useContext(SwiperContext);
+    const context = useContext(Context);
 
     if (!context) {
         throw new Error('ProductSwiper must be used within a SwiperProvider');

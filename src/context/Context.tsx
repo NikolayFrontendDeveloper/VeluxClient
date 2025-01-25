@@ -2,7 +2,7 @@ import { createContext, useState, ReactNode } from 'react';
 import { Swiper as SwiperClass } from 'swiper/types'; // Импорт SwiperClass
 
 // Тип контекста
-interface SwiperContextType {
+interface ContextType {
   mainSwiper: SwiperClass | null;               // Основной Swiper
   indicators: string[];                         // Цвета индикаторов
   setMainSwiper: (swiper: SwiperClass) => void; // Обновить основной Swiper
@@ -10,15 +10,15 @@ interface SwiperContextType {
 }
 
 // Создаем сам контекст
-export const SwiperContext = createContext<SwiperContextType | undefined>(undefined);
+export const Context = createContext<ContextType | undefined>(undefined);
 
 // Провайдер контекста
-export const SwiperProvider = ({ children }: { children: ReactNode }) => {
+export const Provider = ({ children }: { children: ReactNode }) => {
   const [mainSwiper, setMainSwiper] = useState<SwiperClass | null>(null); // Состояние для основного Swiper
   const [indicators, setIndicators] = useState<string[]>([]);            // Состояние для индикаторов
 
   return (
-    <SwiperContext.Provider
+    <Context.Provider
       value={{
         mainSwiper,
         indicators,
@@ -27,6 +27,6 @@ export const SwiperProvider = ({ children }: { children: ReactNode }) => {
       }}
     >
       {children}
-    </SwiperContext.Provider>
+    </Context.Provider>
   );
 };

@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Thumbs } from 'swiper/modules';
 import { useState, useContext } from 'react';
 import { Swiper as SwiperClass } from 'swiper/types';
-import { SwiperContext } from '../../context/SwiperContext';
+import { Context } from '../../context/Context';
 // @ts-ignore
 import 'swiper/css';
 // @ts-ignore
@@ -17,7 +17,7 @@ type ImagePath = string;
 export default function ProductSwiper() {
     // Типизируем состояние Swiper
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
-    const context = useContext(SwiperContext);
+    const context = useContext(Context);
 
     if (!context) {
         throw new Error('SomeComponent must be used within a SwiperProvider');
