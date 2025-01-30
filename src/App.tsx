@@ -5,6 +5,8 @@ import ShopPage from "./pages/ShopPage";
 import ContactPage from "./pages/ContactPage";
 import ProductPage from "./pages/ProductPage";
 import { Provider } from "./context/Context";
+import LogInPage from "./pages/LogInPage";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
           <Route path="shop" element={<ShopPage></ShopPage>} />
           <Route path="contact" element={<ContactPage></ContactPage>} />
           <Route path="product" element={<ProductPage></ProductPage>} />
-          <Route path="authentication" element={<ProductPage></ProductPage>} />
+          <Route path="profile" element={<ProfilePage></ProfilePage>} />
+          <Route path="authentication" element={<LogInPage></LogInPage>} />
         </Route>
       </Routes>
     </Provider>
