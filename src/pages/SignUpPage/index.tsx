@@ -30,7 +30,7 @@ export default function SignUpPage() {
     <div className={s.main_container}>
       <div className={s.banner_media}>
         <form onSubmit={handleSubmit(onSubmit)} className={s.form}>
-          <h2 className={s.login_title}>Log In</h2>
+          <h2 className={s.login_title}>Sign Up</h2>
           <div className={s.input_box}>
             <label htmlFor="email">Email</label>
             <input
