@@ -9,7 +9,7 @@ interface RegisterFormData {
   password: string;
 }
 
-export default function LogInPage() {
+export default function SignUpPage() {
   const [isVisiblePass, setIsVisiblePass] = useState<boolean>(false);
 
   const {
@@ -68,8 +68,8 @@ export default function LogInPage() {
             )}
             {errors.password && <p>{errors.password.message}</p>}
           </div>
-          <button type="submit">Log In</button>
-          <p>Don't have an account? <NavLink className={s.link} to="/sign-up">Sign Up</NavLink></p>
+          <button type="submit">Sign Up</button>
+          <p>Have an account? <NavLink className={s.link} to="/log-in">Log In</NavLink></p>
         </form>
         <img className={s.banner} src="banner-media.svg" alt="banner" />
       </div>

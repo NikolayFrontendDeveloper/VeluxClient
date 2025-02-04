@@ -5,7 +5,7 @@ export default function ProfilePage() {
     const navigate = useNavigate();
     
     useEffect(() => {
-        navigate("/authentication");
+        navigate("/log-in");
     }, [])
     return (
         <div className="main_container">

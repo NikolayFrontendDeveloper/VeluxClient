@@ -13,9 +13,15 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
+        text-decoration: none;
+
+        .product_description {
+            text-decoration: none;
+        }
 
         .product_price {
             font-weight: bold;
+            text-decoration: none;
         }
     }
 
@@ -27,7 +33,7 @@
         border: none;
         box-shadow: 1px 1px 5px 1px rgb(118, 118, 118);
         padding: 12px;
-        transition: .6s;
+        transition: .3s;
 
         .btn_add_product_icon {
             width: 16px;

@@ -6,6 +6,7 @@ import ContactPage from "./pages/ContactPage";
 import ProductPage from "./pages/ProductPage";
 import { Provider } from "./context/Context";
 import LogInPage from "./pages/LogInPage";
+import SignUpPage from "./pages/SignUpPage";
 import ProfilePage from "./pages/ProfilePage";
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
           <Route path="contact" element={<ContactPage></ContactPage>} />
           <Route path="product" element={<ProductPage></ProductPage>} />
           <Route path="profile" element={<ProfilePage></ProfilePage>} />
-          <Route path="authentication" element={<LogInPage></LogInPage>} />
+          <Route path="log-in" element={<LogInPage></LogInPage>} />
+          <Route path="sign-up" element={<SignUpPage></SignUpPage>} />
         </Route>
       </Routes>
     </Provider>
