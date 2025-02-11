@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import useSignIn from 'react-auth-kit/hooks/useSignIn';
+import axios, {AxiosError} from "axios";
 import s from "./styles.module.scss";
 
 interface RegisterFormData {
@@ -11,6 +13,7 @@ interface RegisterFormData {
 
 export default function LogInPage() {
   const [isVisiblePass, setIsVisiblePass] = useState<boolean>(false);
+  const signIn = useSignIn();
 
   const {
     register,
@@ -18,8 +21,26 @@ export default function LogInPage() {
     formState: { errors },
   } = useForm<RegisterFormData>();
 
-  const onSubmit = (data: RegisterFormData) => {
+  const onSubmit = async (data: RegisterFormData) => {
     console.log("Form Data:", data);
+
+    try {
+      const response = await axios.post("http://localhost:4400/login", data, {
+        withCredentials: true, // Отправка cookies с запросом
+      });
+
+      signIn({
+        auth : {
+          token: response.data.accessToken,
+          type: 'Bearer'
+        },
+        userState: {
+          email: data.email
+        }
+      })
+    } catch (err) {
+      console.log("Error:", err)
+    }
   };
 
   const handleVisiblePass = () => {
