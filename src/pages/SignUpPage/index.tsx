@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import axios, {AxiosError} from "axios";
 import s from "./styles.module.scss";
 
 interface RegisterFormData {
@@ -18,8 +19,15 @@ export default function SignUpPage() {
     formState: { errors },
   } = useForm<RegisterFormData>();
 
-  const onSubmit = (data: RegisterFormData) => {
+  const onSubmit = async (data: RegisterFormData) => {
     console.log("Form Data:", data);
+
+    try {
+      const response = await axios.post("http://localhost:4400/register", data, {
+      });
+    } catch (err) {
+      console.log("Error:", err)
+    }
   };
 
   const handleVisiblePass = () => {

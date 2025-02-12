@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import useSignIn from 'react-auth-kit/hooks/useSignIn';
 import axios, {AxiosError} from "axios";
+import { useNavigate } from "react-router-dom";
 import s from "./styles.module.scss";
 
 interface RegisterFormData {
@@ -12,6 +13,7 @@ interface RegisterFormData {
 }
 
 export default function LogInPage() {
+  const navigate = useNavigate();
   const [isVisiblePass, setIsVisiblePass] = useState<boolean>(false);
   const signIn = useSignIn();
 
@@ -26,7 +28,7 @@ export default function LogInPage() {
 
     try {
       const response = await axios.post("http://localhost:4400/login", data, {
-        withCredentials: true, // Отправка cookies с запросом
+        withCredentials: true,
       });
 
       signIn({
@@ -38,6 +40,10 @@ export default function LogInPage() {
           email: data.email
         }
       })
+
+      localStorage.setItem("accessToken", response.data.accessToken);
+      navigate("/profile");
+
     } catch (err) {
       console.log("Error:", err)
     }
