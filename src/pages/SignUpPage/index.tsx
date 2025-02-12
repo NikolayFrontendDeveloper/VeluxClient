@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios, {AxiosError} from "axios";
 import s from "./styles.module.scss";
 
@@ -11,6 +12,7 @@ interface RegisterFormData {
 }
 
 export default function SignUpPage() {
+  const navigate = useNavigate();
   const [isVisiblePass, setIsVisiblePass] = useState<boolean>(false);
 
   const {
@@ -25,6 +27,8 @@ export default function SignUpPage() {
     try {
       const response = await axios.post("http://localhost:4400/register", data, {
       });
+
+      navigate("/log-in");
     } catch (err) {
       console.log("Error:", err)
     }
